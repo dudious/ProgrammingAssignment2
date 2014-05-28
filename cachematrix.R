@@ -22,12 +22,12 @@ makeCachedMatrix <- function(x = matrix()) {
         get <- function() {
                 x
         }
-        # create "setmean" function : 
-        # store the mean in "cached.matrix" to parent env (makeCacheMatrix).        
+        # create "setcache" function : 
+        # store the inverted matrix in "cached.matrix" to parent env (makeCacheMatrix).        
         setcache <- function(inverse) {
                 cached.matrix <<- inverse
         }
-        # create "getmean" function : 
+        # create "getcache" function : 
         # show "cached.matrix" from parent env (makeCacheMatrix)
         getcache <- function() {
                 cached.matrix
